@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iFinance</title>
+    <link href="/assets/css/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <nav>
+                    <a href="" class="logo-box"><img src="/assets/img/ifinance-logo.png" width="365"/></a>
+                    <div class="menu-nav">
+                        <ul>
+                            <li><a href="#about-sec">About Us</a></li>
+                            <li><a href="#howtoqualify-sec">How to Qualify</a></li>
+                            <li><a href="#contactus-sec">Contact Us</a></li>
+                            <li><a href="login.html" class="btn-login">Login</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="banner-sec">
+        <div class="container">
+            <div class="row">
+                <div>
+                   <div class="banner-text">
+                    <h1>Find the Perfect <br/>
+                        loan for you...</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices, leo ac pretium ultrices, orci nulla iaculis nisi, id tristique ante ipsum imperdiet dui. Etiam quis purus dui.</p>
+                   </div>
+                </div>
+                <div>
+                    <div class="apply-now-box">
+                        <form class="form-amount-range">
+                            <h3>Choose your Loan amount</h3>
+                            <div class="label-group">
+                                <label>Amount</label>
+                                <label class="amount"><span id="amountTotalrange">5.000 </span><small>PHP</small></label>
+                            </div>
+                            <div class="form-group">
+                                <input type="range" min="500" max="25000" value="5000" step="500" class="amount-range" id="amountRange">
+                            </div>
+                            <div class="label-group">
+                                <label>Payment Terms</label>
+                            </div>
+                            <div class="label-group">
+                                <label class="amount"><input type="radio" name="paymentTerm" value="30"/> 30 <small>DAYS</small></label>
+                                <label class="amount"><input type="radio" name="paymentTerm" value="60"/> 60 <small>DAYS</small></label>
+                                <label class="amount"><input type="radio" name="paymentTerm" value="90"/> 90 <small>DAYS</small></label>
+                            </div>
+                            <button class="btn-apply">Apply Now</button>
+                            <a href="/login.html">Login</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner-backgrounds">
+            <img src="/assets/img/green-blob.png" width="696" class="green-blob"/> 
+            <img src="/assets/img/banner-graphics-bg.png" width="768"  class="banner-graphics"/>
+            <img src="/assets/img/asian-woman-removebg-preview.png" width="589" class="woman-img"/>
+        </div>
+    </section>
+    <section class="steps-sec">
+        <div class="container">
+            <div class="row">
+                <div>
+                    <h3>Getting a <br/>
+                        Loan is Easy!</h3>
+                    <a href="" class="btn-apply">Apply Now</a>
+                </div>
+                <div>
+                    <h3>Getting a <br/>
+                        Loan is Easy!</h3>
+                    <a href="" class="btn-apply">Apply Now</a>
+                </div>
+                <div>
+                    <h3>Getting a <br/>
+                        Loan is Easy!</h3>
+                    <a href="" class="btn-apply">Apply Now</a>
+                </div>
+                <div>
+                    <h3>Getting a <br/>
+                        Loan is Easy!</h3>
+                    <a href="" class="btn-apply">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        var slider = document.getElementById("amountRange");
+        var output = document.getElementById("amountTotalrange");
+        output.innerHTML = slider.value;
+        
+        slider.oninput = function() {
+          output.innerHTML = this.value ;
+        }
+        </script>
+</body>
+</html> 

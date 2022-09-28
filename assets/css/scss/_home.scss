@@ -1,0 +1,12 @@
+.steps-sec{
+    padding: 50px 0;
+    .row{
+       display: flex;
+       flex-wrap: wrap;
+       gap: 3%; 
+       align-items: center;
+       div{
+            flex: 0 22%;
+       }
+    }
+}

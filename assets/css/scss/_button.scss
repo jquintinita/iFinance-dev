@@ -1,0 +1,36 @@
+
+.btn-login{
+    background-color: var(--btn-green);
+    color: var(--light-text) !important;
+    border: 1px solid var(--btn-green);
+    border-radius: 30px;
+    padding: 10px 2em;
+    min-width: 200px;
+    text-align: center;
+    display: inline-block;
+    transition: all 200ms linear;
+    cursor: pointer;
+}
+.btn-login:hover{
+    background-color: var(--btn-green-hover);
+    color: var(--light-text) !important;
+    border: 1px solid var(--btn-green-hover);
+}
+
+.btn-apply{
+    background-color: var(--btn-blue);
+    color: var(--light-text) !important;
+    border: 1px solid var(--btn-blue);
+    border-radius: 30px;
+    padding: 10px 2em;
+    min-width: 200px;
+    text-align: center;
+    display: inline-block;
+    transition: all 200ms linear;
+    cursor: pointer;
+}
+.btn-apply:hover{
+    background-color: var(--btn-blue-hover);
+    color: var(--light-text) !important;
+    border: 1px solid var(--btn-blue-hover);
+}

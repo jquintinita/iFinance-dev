@@ -1,0 +1,80 @@
+.form-amount-range{
+    background-color: rgba(255, 255, 255, 0.815);
+    padding: 40px 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    max-width: 380px;
+    margin-right: 0;
+    margin-left: auto;
+    display: block;
+    text-align: center;
+    .label-group{
+        position: relative;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        margin: 8px 0;
+        align-items: flex-end;
+    }
+    .label-group label{
+        font-weight: 600;
+        text-align: left;
+    }
+    .label-group label small{
+        font-weight: 400;
+        font-size: 12px;
+    }
+    .amount{
+        font-size: 22px !important;
+    }
+    .form-group > input[type="range"]{
+        -webkit-appearance: none;
+        width: 100%;
+        height: 5px;
+        border-radius: 5px;
+        background: #d3d3d3;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+    }
+    .form-group > input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: #239ED6;
+        cursor: pointer;
+    }
+    
+    .form-group > input[type="range"]::-moz-range-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: #239ED6;
+        cursor: pointer;
+    }
+    .btn-apply{
+        display: block;
+        margin: 20px auto;
+        font-size: 18px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .btn-apply + a{
+        text-align: center;
+        color: var(--dark-text);
+        font-size: 18px;
+        text-decoration: underline;
+    }
+}
+.form-group{
+    display: block;
+    margin: 15px 0;
+}
+.form-group input{
+    margin-bottom: 15px;
+}
+
