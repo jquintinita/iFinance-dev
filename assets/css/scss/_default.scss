@@ -38,4 +38,49 @@ body{
     &.flex-reverse{
         flex-direction: row-reverse;
     }
+    &.flex-3-4col {
+        align-items: center;
+        div:first-child{
+            flex: 0 63%;
+        }
+        div:last-child{
+            flex: 0 32%
+        }
+    }
+}
+
+.text-center{
+    text-align: center;
+}
+.list-inline{
+    display: block;
+    li{
+        list-style: none;
+        display: inline-block;
+        padding: 0 12px;
+        a{
+            color: inherit;
+        }
+    }
+}
+footer{
+    background-color: #596E75;
+    padding: 60px 0;
+    color: #fff;
+    .logo-footer{
+        display: block;
+        max-width: 350px;
+        margin-left: 0;
+    }
+    .row{
+        padding-bottom: 30px;
+        border-bottom: 1px solid #fff;
+    }
+    .copyright{
+        padding-top: 30px;
+    }
+    .flex-container{
+        justify-content: space-between;
+        align-items: flex-end;
+    }
 }

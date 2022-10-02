@@ -1,5 +1,5 @@
 .steps-sec{
-    padding: 50px 0;
+    padding: 60px 0;
     .row{
        display: flex;
        flex-wrap: wrap;
@@ -44,7 +44,7 @@
 
 #about-us{
     background-color: #EAFBFF;
-    padding: 50px 0;
+    padding: 60px 0;
     overflow: hidden;
     .row{
         padding: 60px 0;
@@ -73,7 +73,7 @@
 
 #how-to-qualify{
     background-color: #fff;
-    padding: 50px 0;
+    padding: 60px 0;
     overflow: hidden;
     background-image: url(../../assets/img/list-img.png);
     background-repeat: no-repeat;
@@ -104,4 +104,158 @@
             }
         }
     }
+}
+
+.cta-banner{
+    padding: 70px 0;
+    background-color: var(--btn-green);
+    color: #fff;
+    h2{
+        margin-bottom: 0 !important;
+    }
+}
+
+#testimonial-sec {
+    padding: 60px 0;
+    background-color: #fff;
+    h2{
+        margin-bottom: 40px;
+    }
+    .testi-slider{
+        margin-top: 20px;
+        .slick-track{
+            display: flex !important;
+            flex-wrap: wrap;
+            padding: 20px 0;
+        }
+        .slick-prev{
+            &:before{
+                font-family: "icomoon";
+                content: "\e903";
+                font-size: 40px;
+                color: var(--dark-text);
+            }
+        }
+        .slick-next{
+            &:before{
+                font-family: "icomoon";
+                content: "\e904";
+                font-size: 40px;
+                color: var(--dark-text);
+            }
+        }
+    }
+    .testi-blurb{
+        display: block;
+        height: auto;
+        .testi-circle-img{
+            position: relative;
+            width: 100%;
+            height: 200px;
+            display: flex;
+            align-items: flex-end;
+            .testi-img{
+                width: 90px;
+                height: 90px;
+                display: block;
+                margin: 0 auto 20px;
+                border: 3px solid #78BB45;
+                overflow: hidden;
+                border-radius: 50%;
+                position: relative;
+                transition: all 400ms ease-in-out;
+                z-index: 3;
+                > img{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    max-width: 100%;
+                }
+            }
+            &:after{
+                width: 100px;
+                height: 95px;
+                border: 3px dashed #D7D7D7;
+                display: block;
+                content: "";
+                border-radius: 50%;
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translateX(-50%);
+                transition: all 700ms ease-in-out;
+                z-index: 1;
+            }
+        }
+        .testi-content{
+            display: block;
+            opacity: 0;
+            margin-top: 50px;
+            text-align: center;
+            .testi-author{
+                margin: 20px auto;
+                h5{
+                    font-size: 22px;
+                }
+            }
+        }
+       &.slick-current{
+            .testi-circle-img{
+                position: relative;
+                display: flex;
+                align-items: center;
+                .testi-img{
+                    width: 200px;
+                    height: 200px;
+                    display: block;
+                    margin: 0 auto 20px;
+                    border: 3px solid #78BB45;
+                    overflow: hidden;
+                    border-radius: 50%;
+                    position: relative;
+                    > img{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        max-width: 100%;
+                    }
+                }
+                &:after{
+                    width: 250px;
+                    height: 220px;
+                    border: 3px dashed #D7D7D7;
+                    display: block;
+                    content: "";
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 0%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    z-index: 1;
+                }
+            }
+            .testi-content{
+                display: block;
+                opacity: 1;
+                margin-top: 50px;
+                text-align: center;
+                .testi-author{
+                    margin: 20px auto;
+                    h5{
+                        font-size: 22px;
+                    }
+                }
+            }
+       }
+    }
+}
+
+#contact-us{
+    padding: 60px 0;
+    background-color: #E7FBFF;
+    background-image: url(../img/building.png);
+    background-position: center 140px;
+    background-repeat: no-repeat;
 }
