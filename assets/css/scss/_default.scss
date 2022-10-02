@@ -27,6 +27,12 @@ body{
     max-width: 1366px;
     width:90%;
     margin:0 auto;
+    @media only screen and (max-width: 480px) {
+        width: 85%;
+    }
+}
+section{
+    overflow: hidden;
 }
 .flex-container{
     display: flex;
@@ -45,6 +51,11 @@ body{
         }
         div:last-child{
             flex: 0 32%
+        }
+    }
+    @media screen and (max-width: 980px) {
+        &.flex-2col > div{
+            flex: 0 100%
         }
     }
 }
@@ -71,6 +82,9 @@ footer{
         display: block;
         max-width: 350px;
         margin-left: 0;
+        img{
+            max-width: 100%;
+        }
     }
     .row{
         padding-bottom: 30px;
@@ -78,9 +92,32 @@ footer{
     }
     .copyright{
         padding-top: 30px;
+        text-align: center;
     }
     .flex-container{
         justify-content: space-between;
         align-items: flex-end;
+    }
+    @media screen  and (max-width: 480px) {
+        .list-inline{
+            li{
+                display: block;
+                text-align: center;
+                a{
+                    display: block;
+                    padding: 8px 1em;
+                }
+            }
+        }
+        .flex-container{
+            div{
+                flex: 0 100%;
+            }
+        }
+        .btn-apply{
+            max-width: 280px;
+            display: block;
+            margin: 10px auto 0;
+        }
     }
 }

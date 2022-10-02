@@ -14,10 +14,17 @@
                 <nav>
                     <a href="" class="logo-box"><img src="./assets/img/ifinance-logo.png" width="365"/></a>
                     <div class="menu-nav">
+                        <button class="menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+                            <svg width="50" height="50" viewBox="0 0 100 100">
+                              <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                              <path class="line line2" d="M 20,50 H 80" />
+                              <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                            </svg>
+                          </button>
                         <ul>
                             <li><a href="#about-us">About Us</a></li>
                             <li><a href="#how-to-qualify">How to Qualify</a></li>
-                            <li><a href="#contactus-sec">Contact Us</a></li>
+                            <li><a href="#contact-us">Contact Us</a></li>
                             <li><a href="login.html" class="btn-login">Login</a></li>
                         </ul>
                     </div>
@@ -32,7 +39,7 @@
                    <div class="banner-text">
                     <h1>Find the Perfect <br/>
                         loan for you...</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices, leo ac pretium ultrices, orci nulla iaculis nisi, id tristique ante ipsum imperdiet dui. Etiam quis purus dui.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices tiam quis purus dui.</p>
                    </div>
                 </div>
                 <div>
@@ -71,8 +78,7 @@
         <div class="container">
             <div class="row">
                 <div>
-                    <h3>Getting a <br/>
-                        Loan is Easy!</h3>
+                    <h3>Getting a Loan is Easy!</h3>
                     <a href="" class="btn-apply">Apply Now</a>
                 </div>
                 <div class="steps">
@@ -96,10 +102,12 @@
     <section id="about-us">
         <div class="container">
             <div class="row flex-container flex-2col">
-                <div class="about-img">
-                    <img src="./assets/img/blue-blob.png" class="blue-blob" width="585" alt=""/>
-                    <img src="./assets/img/store-img.png"  class="store-img" width="493" alt=""/>
-                    <img src="./assets/img/old-asian-woman.png" class="old-woman" width="426" alt=""/>
+                <div>
+                    <div class="about-img">
+                        <img src="./assets/img/blue-blob.png" class="blue-blob" width="585" alt=""/>
+                        <img src="./assets/img/store-img.png"  class="store-img" width="493" alt=""/>
+                        <img src="./assets/img/old-asian-woman.png" class="old-woman" width="426" alt=""/>
+                    </div>
                 </div>
                 <div class="">
                     <h2>About Us</h2>
@@ -112,11 +120,13 @@
     <section id="how-to-qualify">
         <div class="container">
             <div class="row flex-container flex-2col flex-reverse">
-                <div class="about-img">
-                 
-                    <img src="./assets/img/young-entrepreneur.png"  class="young-entrep" width="493" alt=""/>
+                <div>
+                    <div class="qualify-img">
+                        <img src="./assets/img/list-img.png" alt="" class="img-list"/>
+                        <img src="./assets/img/young-entrepreneur.png"  class="young-entrep" width="493" alt=""/>
+                    </div>
                 </div>
-                <div class="">
+                <div >
                     <h2>How do I Qualify for a Loan?</h2>
                     <h4>Sed ut perspiciatis</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -257,7 +267,7 @@
             <div class="row flex-container">
                 <div class="">
                     <a href="/" class="logo-footer"><img src="./assets/img/ifinance-logo-white.png" alt="ifinance Logo"/> </a>
-                    <ul class="list-inline">
+                    <ul class="list-inline footer-link">
                         <li><a href="#about-us">About Us</a></li>
                         <li><a href="#how-to-qualify">How to Qualify</a></li>
                         <li><a href="#contactus-sec">FAQ</a></li>
