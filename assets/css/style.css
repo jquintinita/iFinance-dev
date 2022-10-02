@@ -296,6 +296,11 @@ footer .flex-container {
     padding: 50px 5%;
   }
 }
+@media screen and (max-width: 414px) {
+  .form-amount-range {
+    padding: 30px 15px;
+  }
+}
 
 .form-group {
   display: block;
@@ -372,10 +377,12 @@ header .logo-box img {
   }
   header .logo-box {
     overflow: hidden;
-    width: 110px;
+    width: 80px;
   }
   header .logo-box img {
     max-width: unset !important;
+    height: 70px;
+    width: auto;
   }
 }
 
@@ -412,7 +419,7 @@ header nav .menu-nav ul li a:hover {
     width: 0;
     height: 0;
     overflow: hidden;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.8);
     z-index: 999;
     right: 0;
     padding: 0;
@@ -597,7 +604,8 @@ header nav .menu-nav ul li a:hover {
     margin-top: -115%;
   }
   .banner-sec .row h1 {
-    font-size: 32px;
+    font-size: 30px;
+    margin-bottom: 0;
     max-width: 80%;
   }
 }
@@ -608,15 +616,15 @@ header nav .menu-nav ul li a:hover {
   right: 0;
 }
 .banner-backgrounds .green-blob {
-  right: 26%;
+  right: 33%;
   bottom: -20px;
 }
 .banner-backgrounds .banner-graphics {
-  right: 26%;
+  right: 33%;
   bottom: 35px;
 }
 .banner-backgrounds .woman-img {
-  right: 26%;
+  right: 33%;
   bottom: 0;
 }
 @media only screen and (max-width: 1440px) {

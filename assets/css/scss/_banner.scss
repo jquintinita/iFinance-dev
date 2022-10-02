@@ -94,7 +94,8 @@
     @media screen and (max-width: 380px) {
         margin-top: -115%;
         h1{
-            font-size: 32px;
+            font-size: 30px;
+            margin-bottom: 0;
             max-width: 80%;
         }
     }
@@ -108,15 +109,15 @@
         right: 0;
     }
     .green-blob{
-        right: 26%;
+        right: 33%;
         bottom: -20px;
     }
     .banner-graphics{
-        right: 26%;
+        right: 33%;
         bottom: 35px;
     }
     .woman-img{
-        right: 26%;
+        right: 33%;
         bottom: 0;
     }
     @media only screen and (max-width: 1440px) {
