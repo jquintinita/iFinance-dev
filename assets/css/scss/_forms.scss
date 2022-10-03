@@ -136,3 +136,30 @@
     }
 }
 
+
+
+.login-form {
+    max-width: 320px;
+    margin: 0 auto;
+    display: block;
+    .form-group{
+        input[type="date"],input[type="phone"]{
+            display: block;
+            width: 100%;
+            padding: 12px 1em;
+            border-radius: 5px;
+            border: 1px solid #666;
+            font-family: 'Montserrat', sans-serif;
+            height: 60px;
+            font-size: 16px;
+        }
+    }
+    .btn-login{
+        display: block  !important;
+        margin: 20px auto;
+        font-size: 18px;
+        font-family: 'Montserrat', sans-serif;
+        width: 100%;
+        padding: 15px 1em !important;
+    }
+}

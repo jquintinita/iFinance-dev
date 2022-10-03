@@ -46,11 +46,20 @@ section{
     }
     &.flex-3-4col {
         align-items: center;
-        div:first-child{
+        > div:first-child{
             flex: 0 63%;
         }
-        div:last-child{
+        > div:last-child{
             flex: 0 32%
+        }
+    }
+    &.flex-1col-3col{ 
+        gap: 0 !important;
+        > div:first-child{
+            flex: 0 30%;
+        }
+        > div:last-child{
+            flex: 0 70%;
         }
     }
     @media screen and (max-width: 980px) {
