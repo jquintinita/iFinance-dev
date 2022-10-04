@@ -56,10 +56,23 @@
                             <div class="label-group">
                                 <label>Payment Terms</label>
                             </div>
-                            <div class="label-group">
-                                <label class="amount"><input type="radio" name="paymentTerm" value="30"/> 30 <small>DAYS</small></label>
-                                <label class="amount"><input type="radio" name="paymentTerm" value="60"/> 60 <small>DAYS</small></label>
-                                <label class="amount"><input type="radio" name="paymentTerm" value="90"/> 90 <small>DAYS</small></label>
+                            <div class="segmentedControl">
+                                <span class="segmentedControl--group">
+                                    <input type="radio" name="termsPayment" id="30Days" checked />
+                                    <label class="label" for="30Days">30 <span>Days</span></label>
+                                </span>
+                                <span class="segmentedControl--group">
+                                    <input type="radio" name="termsPayment" id="60Days" />
+                                    <label class="label" for="60Days">60 <span>Days</span></label>
+                                </span>
+                                <span class="segmentedControl--group">
+                                    <input type="radio" name="termsPayment" id="90Days" />
+                                    <label class="label" for="90Days">90 <span>Days</span></label>
+                                </span>
+                                <span class="segmentedControl--group">
+                                    <input type="radio" name="termsPayment" id="120Days" />
+                                    <label class="label" for="120Days">120 <span>Days</span></label>
+                                </span>
                             </div>
                             <button class="btn-apply">Apply Now</button>
                             <a href="/login.html">Login</a>

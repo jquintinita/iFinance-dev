@@ -77,7 +77,7 @@
     z-index: 9;
     align-items: center;
     position: relative;
-    div{
+    > div{
         flex: 0 47%;
         gap: 3%;
     }

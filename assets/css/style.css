@@ -14,6 +14,23 @@
   --btn-text: #fff;
   --dark-text: #333;
   --light-text: #fff;
+  --time-nav-hover: 0.25s;
+  --color-fire: #78BC45;
+  --color-black: #191919;
+  --color-grey-5: #FBFBFB;
+  --color-grey-10: #F6F7F7;
+  --color-grey-cool-10: #EEEEEF;
+  --color-grey-15: #E8E8E8;
+  --color-grey-20: #D5D6D8;
+  --color-grey-60: #ABADB1;
+  --color-grey-70: #888891;
+  --color-grey-80: #6B6A6A;
+  --color-grey-85: #59595F;
+  --shadow-fire:
+  	0 4px 12px 4px rgba(0, 227, 11, 0.2),
+  	0 1px 3px 0 rgba(7, 137, 18, 0.4) ;
+  --focus-style: dotted 2px var(--color-black);
+  --focus-offset: 2px;
 }
 
 a {
@@ -76,6 +93,29 @@ section {
 @media screen and (max-width: 980px) {
   .flex-container.flex-2col > div {
     flex: 0 100%;
+  }
+  .flex-container.flex-1col-3col {
+    gap: 0 !important;
+  }
+  .flex-container.flex-1col-3col > div:first-child {
+    flex: 0 40%;
+  }
+  .flex-container.flex-1col-3col > div:last-child {
+    flex: 1 auto;
+  }
+}
+@media screen and (max-width: 580px) {
+  .flex-container.flex-2col > div {
+    flex: 0 100%;
+  }
+  .flex-container.flex-1col-3col {
+    gap: 0 !important;
+  }
+  .flex-container.flex-1col-3col > div:first-child {
+    flex: 0 100%;
+  }
+  .flex-container.flex-1col-3col > div:last-child {
+    flex: 1 auto;
   }
 }
 
@@ -252,7 +292,7 @@ footer .flex-container {
 }
 .form-amount-range .label-group label small {
   font-weight: 400;
-  font-size: 12px;
+  font-size: 10px;
 }
 .form-amount-range .amount {
   font-size: 22px !important;
@@ -391,6 +431,142 @@ footer .flex-container {
   font-family: "Montserrat", sans-serif;
   width: 100%;
   padding: 15px 1em !important;
+}
+
+.segmentedControl {
+  --options: 4;
+  --options-active: 1;
+  --options-gap: 0px;
+  border-radius: 0.25em;
+  position: relative;
+  border: solid 1px var(--color-grey-20);
+  border-radius: 0.25em;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+}
+.segmentedControl .segmentedControl--group {
+  flex: 0 0 auto;
+  width: calc((100% - var(--options) * var(--options-gap) * 2) / var(--options));
+  display: flex;
+  flex-flow: row;
+  justify-content: stretch;
+  align-items: stretch;
+}
+.segmentedControl .segmentedControl--group input {
+  opacity: 0;
+  position: absolute;
+}
+.segmentedControl .segmentedControl--group input + label {
+  border-radius: 0.25em;
+  flex: 1 1 100%;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: var(--font-barlow);
+  line-height: 1;
+  margin: 0;
+  padding: 0.5em 0;
+  position: relative;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+  z-index: 1;
+}
+.segmentedControl .segmentedControl--group input + label::before, .segmentedControl .segmentedControl--group input + label::after {
+  border-radius: inherit;
+  content: "";
+  display: block;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+.segmentedControl .segmentedControl--group input + label::before {
+  background: var(--color-grey-20);
+  transition: opacity 0.15s ease;
+}
+.segmentedControl .segmentedControl--group input + label::after {
+  background: var(--color-fire);
+  box-shadow: var(--shadow-fire);
+  transition: opacity 0.15s ease;
+}
+.segmentedControl .segmentedControl--group input + label:hover::before {
+  opacity: 1;
+}
+.segmentedControl .segmentedControl--group input + label > span {
+  font-size: 11px !important;
+  text-transform: uppercase;
+}
+.segmentedControl .segmentedControl--group input:focus + label {
+  outline: none;
+}
+.segmentedControl .segmentedControl--group input:focus-visible + label {
+  outline: var(--focus-style);
+  outline-offset: var(--focus-offset);
+}
+.segmentedControl .segmentedControl--group input:-moz-focusring + label {
+  outline: var(--focus-style);
+  outline-offset: var(--focus-offset);
+}
+.segmentedControl .segmentedControl--group input:checked + label {
+  background: var(--color-grey-10);
+  color: #fff;
+  font-weight: 700;
+}
+.segmentedControl .segmentedControl--group input:checked + label::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .segmentedControl .segmentedControl--group input + label {
+    transition: color 0.2s ease;
+  }
+  .segmentedControl .segmentedControl--group input + label::before {
+    transition: opacity 0.3s ease;
+  }
+  .segmentedControl .segmentedControl--group input + label::after {
+    transform: scale(0.85, 0.5);
+    transition: opacity 0.15s ease, transform 0.3s cubic-bezier(0, 0.99, 0.52, 1.29);
+  }
+  .segmentedControl.useSlidingAnimation::before {
+    background: var(--color-fire);
+    border-radius: 0.375em;
+    box-shadow: var(--shadow-fire);
+    content: "";
+    display: block;
+    height: calc(100% - var(--options-gap) * 2);
+    position: absolute;
+    top: var(--options-gap);
+    left: var(--options-gap);
+    transform: translateX(calc((100% + var(--options-gap) * 2) * (var(--options-active) - 1)));
+    transition: transform cubic-bezier(0.8, 0.34, 0.28, 1.15) 0.35s;
+    width: calc((100% - var(--options) * var(--options-gap) * 2) / var(--options));
+  }
+  .segmentedControl.useSlidingAnimation .segmentedControl--group input + label {
+    background: none;
+    transition: color 0.3s ease;
+  }
+  .segmentedControl.useSlidingAnimation .segmentedControl--group input + label::after {
+    content: none;
+  }
+  .segmentedControl.useSlidingAnimation .segmentedControl--group input:checked + label:hover::before {
+    opacity: 0;
+  }
+}
+/* utilities */
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 header {
@@ -614,7 +790,7 @@ header nav .menu-nav ul li a:hover {
   align-items: center;
   position: relative;
 }
-.banner-sec .row div {
+.banner-sec .row > div {
   flex: 0 47%;
   gap: 3%;
 }
@@ -1433,6 +1609,9 @@ header nav .menu-nav ul li a:hover {
 }
 .login-sec .banner {
   padding: 40px 50px;
+  background-image: url(../img/login-bg.png);
+  background-size: cover;
+  background-blend-mode: multiply;
   background-color: var(--btn-green);
   color: var(--light-text);
   display: flex;
@@ -1460,6 +1639,23 @@ header nav .menu-nav ul li a:hover {
   text-align: center;
   position: relative;
   z-index: 2;
+}
+@media screen and (max-width: 980px) {
+  .login-sec .banner-wrapper {
+    display: block !important;
+    padding: 10% 40px;
+  }
+  .login-sec .banner-wrapper img {
+    width: 100%;
+  }
+  .login-sec .banner-wrapper h1 {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .login-sec .banner {
+    display: none;
+  }
 }
 
 .circles {

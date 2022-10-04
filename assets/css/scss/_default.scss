@@ -12,6 +12,28 @@
     --btn-text: #fff;
     --dark-text: #333;
     --light-text: #fff;
+    
+	--time-nav-hover: 0.25s;
+
+	--color-fire:           #78BC45;
+	--color-black:          #191919;
+	--color-grey-5:         #FBFBFB;
+	--color-grey-10:        #F6F7F7;
+	--color-grey-cool-10:   #EEEEEF;
+	--color-grey-15:        #E8E8E8;
+	--color-grey-20:        #D5D6D8;
+	--color-grey-60:        #ABADB1;
+	--color-grey-70:        #888891;
+	--color-grey-80:        #6B6A6A;
+	--color-grey-85:        #59595F;
+	
+	--shadow-fire: 
+		0 4px 12px 4px rgba(0, 227, 11, 0.2), 
+		0 1px 3px 0 rgba(7, 137, 18, 0.4)
+	;
+	
+	--focus-style: dotted 2px var(--color-black);
+	--focus-offset: 2px;
 }
 a{
     text-decoration: none;
@@ -65,6 +87,29 @@ section{
     @media screen and (max-width: 980px) {
         &.flex-2col > div{
             flex: 0 100%
+        }
+        &.flex-1col-3col{ 
+            gap: 0 !important;
+            > div:first-child{
+                flex: 0 40%;
+            }
+            > div:last-child{
+                flex: 1 auto;
+            }
+        }
+    }
+    @media screen and (max-width: 580px) {
+        &.flex-2col > div{
+            flex: 0 100%
+        }
+        &.flex-1col-3col{ 
+            gap: 0 !important;
+            > div:first-child{
+                flex: 0 100%;
+            }
+            > div:last-child{
+                flex: 1 auto;
+            }
         }
     }
 }
