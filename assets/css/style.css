@@ -14,6 +14,7 @@
   --btn-text: #fff;
   --dark-text: #333;
   --light-text: #fff;
+  --color-red: rgb(255, 53, 53);
   --time-nav-hover: 0.25s;
   --color-fire: #78BC45;
   --color-black: #191919;
@@ -89,6 +90,9 @@ section {
 }
 .flex-container.flex-1col-3col > div:last-child {
   flex: 0 70%;
+}
+.flex-container.flex-3col > div {
+  flex: 30.33%;
 }
 @media screen and (max-width: 980px) {
   .flex-container.flex-2col > div {
@@ -259,11 +263,49 @@ footer .flex-container {
   border: 1px solid var(--btn-blue-hover);
 }
 
+.btn-default {
+  background-color: var(--color-grey-80);
+  color: var(--light-text) !important;
+  border: 2px solid var(--color-grey-80);
+  border-radius: 30px;
+  padding: 10px 2em;
+  min-width: 200px;
+  text-align: center;
+  display: inline-block;
+  transition: all 200ms linear;
+  cursor: pointer;
+}
+
+.btn-default:hover {
+  background-color: var(--color-grey-20);
+  color: var(--dark-text) !important;
+  border: 1px solid var(--color-grey-80);
+}
+
 .btn-center {
   display: block;
   max-width: 200px !important;
   margin-left: auto;
   margin-right: auto;
+}
+
+.btn-border {
+  background-color: var(--light-text);
+  color: var(--dark-text) !important;
+  border: 2px solid var(--btn-green);
+  border-radius: 30px;
+  padding: 10px 2em;
+  min-width: 200px;
+  text-align: center;
+  display: inline-block;
+  transition: all 200ms linear;
+  cursor: pointer;
+}
+
+.btn-border:hover {
+  background-color: var(--btn-green-hover);
+  color: var(--light-text) !important;
+  border: 2px solid var(--btn-green-hover);
 }
 
 .form-amount-range {
@@ -500,6 +542,11 @@ footer .flex-container {
   font-size: 11px !important;
   text-transform: uppercase;
 }
+@media screen and (max-width: 360px) {
+  .segmentedControl .segmentedControl--group input + label > span {
+    font-size: 9px !important;
+  }
+}
 .segmentedControl .segmentedControl--group input:focus + label {
   outline: none;
 }
@@ -519,6 +566,11 @@ footer .flex-container {
 .segmentedControl .segmentedControl--group input:checked + label::after {
   opacity: 1;
   transform: scale(1);
+}
+@media screen and (max-width: 380px) {
+  .segmentedControl {
+    gap: 0;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -820,7 +872,7 @@ header nav .menu-nav ul li a:hover {
   .banner-sec .row {
     margin-top: -123%;
   }
-  .banner-sec .row div {
+  .banner-sec .row > div {
     flex: 0 47%;
     gap: 2%;
   }
@@ -1598,6 +1650,9 @@ header nav .menu-nav ul li a:hover {
   background-color: #fff;
   height: 100vh;
 }
+.login-sec .login-wrapper a {
+  color: var(--dark-text);
+}
 .login-sec .login-wrapper .logo {
   margin: 30% auto 30px;
 }
@@ -1655,6 +1710,9 @@ header nav .menu-nav ul li a:hover {
 @media screen and (max-width: 580px) {
   .login-sec .banner {
     display: none;
+  }
+  .login-sec .login-wrapper {
+    padding: 30px !important;
   }
 }
 
@@ -1801,4 +1859,130 @@ header nav .menu-nav ul li a:hover {
     opacity: 0;
     border-radius: 70%;
   }
+}
+.dashboard {
+  padding: 60px 0;
+}
+.dashboard h3 {
+  font-size: 28pt;
+  color: var(--dark-text);
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 580px) {
+  .dashboard h3 {
+    font-size: 7vw;
+  }
+}
+.dashboard h4 {
+  font-size: 18pt;
+  margin-bottom: 10px;
+  color: var(--dark-text);
+}
+.dashboard .account-overview {
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  font-weight: 400;
+  color: var(--dark-text);
+}
+.dashboard .account-overview > .flex-in-between {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+.dashboard .account-overview > .flex-in-between > div:last-child {
+  text-align: center;
+}
+@media screen and (max-width: 580px) {
+  .dashboard .account-overview > .flex-in-between > div {
+    flex: 0 100%;
+  }
+}
+.dashboard .account-overview .flex-container {
+  align-items: flex-end;
+}
+.dashboard .account-overview .flex-container label {
+  display: block;
+  text-align: center;
+}
+.dashboard .account-overview .flex-container label + span {
+  text-align: center;
+  display: block;
+  font-weight: 500;
+}
+.dashboard .account-overview .flex-container > div label {
+  font-size: 20pt;
+  font-weight: 700;
+  color: var(--dark-red);
+}
+.dashboard .account-overview .flex-container > div label > small {
+  color: var(--dark-text);
+  font-size: 22px;
+}
+@media screen and (max-width: 580px) {
+  .dashboard .account-overview .flex-container > div {
+    flex: 0 47%;
+  }
+  .dashboard .account-overview .flex-container > div > label {
+    font-size: 4vw !important;
+  }
+  .dashboard .account-overview .flex-container > div > label > small {
+    font-size: 9px;
+  }
+  .dashboard .account-overview .flex-container > div > label + span {
+    font-size: 10px;
+  }
+  .dashboard .account-overview .flex-container > div:first-child {
+    flex: 0 100% !important;
+    margin-bottom: 20px;
+  }
+}
+.dashboard .account-overview .flex-container .accountBalance label {
+  font-size: 26pt !important;
+  font-weight: 700;
+  color: var(--color-red) !important;
+}
+.dashboard .account-overview .flex-container .accountBalance label > small {
+  color: var(--dark-text);
+  font-size: 22px;
+}
+@media screen and (max-width: 580px) {
+  .dashboard .account-overview {
+    padding: 30px 20px;
+  }
+}
+.dashboard .history-overview {
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  color: var(--dark-text);
+}
+
+.table-container table {
+  border-collapse: collapse;
+  background: #fff;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.table-container table thead {
+  background-color: var(--btn-blue);
+}
+.table-container table thead th {
+  color: #fff;
+  line-height: 1.2;
+  padding: 8px 1em;
+}
+.table-container table tbody tr:nth-child(even) {
+  background-color: var(--color-grey-10);
+}
+.table-container table tbody td {
+  text-align: center;
+  padding: 8px 1em;
 }/*# sourceMappingURL=style.css.map */

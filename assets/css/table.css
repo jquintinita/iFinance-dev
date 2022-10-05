@@ -1,0 +1,12 @@
+.table-container table {
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.table-container table thead {
+  background-color: var(--color-black);
+}/*# sourceMappingURL=table.css.map */

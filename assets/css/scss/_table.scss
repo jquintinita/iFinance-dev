@@ -1,0 +1,27 @@
+.table-container{
+    table{
+        border-collapse: collapse;
+        background: #fff;
+        overflow: hidden;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;  
+        thead{
+            background-color:var(--btn-blue);
+            th{
+                color: #fff;
+                line-height: 1.2;
+                padding: 8px 1em;
+            }
+        }
+        tbody{
+            tr:nth-child(even){
+                background-color: var(--color-grey-10);
+            }
+            td{
+                text-align: center;
+                padding: 8px 1em;
+            }
+        }
+    }
+}
