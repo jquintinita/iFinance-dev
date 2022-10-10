@@ -82,6 +82,15 @@
 .form-group{
     display: block;
     margin: 15px 0;
+    input[type="date"],input[type="phone"], input[type="text"]{
+        display: block;
+        width: 100%;
+        padding: 8px 1em;
+        border-radius: 5px;
+        border: 1px solid #666;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+    }
     
 }
 .form-group input{

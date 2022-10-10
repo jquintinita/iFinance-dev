@@ -62,6 +62,15 @@ section {
   overflow: hidden;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.text-block {
+  display: block;
+  margin-bottom: 30px;
+}
+
 .flex-container {
   display: flex;
   flex-wrap: wrap;
@@ -92,7 +101,7 @@ section {
   flex: 0 70%;
 }
 .flex-container.flex-3col > div {
-  flex: 30.33%;
+  flex: 30.33% !important;
 }
 @media screen and (max-width: 980px) {
   .flex-container.flex-2col > div {
@@ -120,6 +129,9 @@ section {
   }
   .flex-container.flex-1col-3col > div:last-child {
     flex: 1 auto;
+  }
+  .flex-container.flex-3col > div {
+    flex: 30.33%;
   }
 }
 
@@ -180,6 +192,62 @@ footer .flex-container {
     max-width: 280px;
     display: block;
     margin: 10px auto 0;
+  }
+}
+
+.table-container table {
+  border-collapse: collapse;
+  background: #fff;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 5px;
+}
+.table-container table thead {
+  background-color: var(--btn-blue);
+}
+.table-container table thead th {
+  color: #fff;
+  line-height: 1.2;
+  padding: 10px 1em;
+}
+@media screen and (max-width: 580px) {
+  .table-container table thead {
+    display: none;
+  }
+}
+.table-container table tbody tr:nth-child(even) {
+  background-color: var(--color-grey-10);
+}
+@media screen and (max-width: 580px) {
+  .table-container table tbody tr {
+    margin-bottom: 0.625em;
+    display: block;
+    border: 1px solid var(--color-grey-10);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+}
+.table-container table tbody td {
+  text-align: center;
+  padding: 10px 1em;
+}
+@media screen and (max-width: 580px) {
+  .table-container table tbody td {
+    display: block;
+    text-align: right;
+    border-bottom: 1px solid #ddd;
+  }
+  .table-container table tbody td:first-child {
+    background-color: var(--btn-blue);
+    color: #fff;
+  }
+  .table-container table tbody td::before {
+    content: attr(data-label);
+    float: left;
+    text-transform: uppercase;
+    font-weight: 700;
   }
 }
 
@@ -397,6 +465,15 @@ footer .flex-container {
 .form-group {
   display: block;
   margin: 15px 0;
+}
+.form-group input[type=date], .form-group input[type=phone], .form-group input[type=text] {
+  display: block;
+  width: 100%;
+  padding: 8px 1em;
+  border-radius: 5px;
+  border: 1px solid #666;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
 }
 
 .form-group input {
@@ -633,7 +710,7 @@ header .logo-box img {
     width: 300px;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 580px) {
   header .container {
     width: 90%;
   }
@@ -645,6 +722,11 @@ header .logo-box img {
     max-width: unset !important;
     height: 70px;
     width: auto;
+  }
+}
+@media screen and (max-width: 425px) {
+  header .menu-nav .btn-border {
+    min-width: 120px !important;
   }
 }
 
@@ -1861,10 +1943,10 @@ header nav .menu-nav ul li a:hover {
   }
 }
 .dashboard {
-  padding: 60px 0;
+  padding: 30px 0;
 }
 .dashboard h3 {
-  font-size: 28pt;
+  font-size: 24pt;
   color: var(--dark-text);
   margin-bottom: 15px;
 }
@@ -1923,6 +2005,24 @@ header nav .menu-nav ul li a:hover {
   color: var(--dark-text);
   font-size: 22px;
 }
+@media screen and (max-width: 980px) {
+  .dashboard .account-overview .flex-container > div {
+    flex: 0 47%;
+  }
+  .dashboard .account-overview .flex-container > div > label {
+    font-size: 5vw !important;
+  }
+  .dashboard .account-overview .flex-container > div > label > small {
+    font-size: 16px;
+  }
+  .dashboard .account-overview .flex-container > div > label + span {
+    font-size: 14px;
+  }
+  .dashboard .account-overview .flex-container > div:first-child {
+    flex: 0 100% !important;
+    margin-bottom: 20px;
+  }
+}
 @media screen and (max-width: 580px) {
   .dashboard .account-overview .flex-container > div {
     flex: 0 47%;
@@ -1950,7 +2050,23 @@ header nav .menu-nav ul li a:hover {
   color: var(--dark-text);
   font-size: 22px;
 }
+@media screen and (max-width: 980px) {
+  .dashboard .account-overview .flex-container .accountBalance label {
+    font-size: 5vw !important;
+  }
+  .dashboard .account-overview .flex-container .accountBalance label > small {
+    font-size: 16px;
+  }
+}
 @media screen and (max-width: 580px) {
+  .dashboard .account-overview .flex-container .accountBalance label {
+    font-size: 7vw !important;
+  }
+  .dashboard .account-overview .flex-container .accountBalance label > small {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 980px) {
   .dashboard .account-overview {
     padding: 30px 20px;
   }
@@ -1962,27 +2078,23 @@ header nav .menu-nav ul li a:hover {
   margin-bottom: 30px;
   color: var(--dark-text);
 }
+@media screen and (max-width: 580px) {
+  .dashboard .history-overview {
+    padding: 30px 20px;
+  }
+}
 
-.table-container table {
-  border-collapse: collapse;
-  background: #fff;
-  overflow: hidden;
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-}
-.table-container table thead {
-  background-color: var(--btn-blue);
-}
-.table-container table thead th {
-  color: #fff;
-  line-height: 1.2;
-  padding: 8px 1em;
-}
-.table-container table tbody tr:nth-child(even) {
+#apply-now-sec {
   background-color: var(--color-grey-10);
+  padding: 60px 0;
 }
-.table-container table tbody td {
-  text-align: center;
-  padding: 8px 1em;
+#apply-now-sec .apply-now-box > .form-amount-range {
+  max-width: 980px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+#apply-now-sec .apply-now-box > .form-amount-range .flex-container {
+  align-items: center;
+  margin-top: 30px;
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */

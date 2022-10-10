@@ -6,21 +6,50 @@
         width: 100%;
         margin: 0 auto;
         position: relative;  
+        border-radius: 5px;
         thead{
             background-color:var(--btn-blue);
             th{
                 color: #fff;
                 line-height: 1.2;
-                padding: 8px 1em;
+                padding: 10px 1em;
+            }
+            @media screen and (max-width: 580px) {
+                display: none;
             }
         }
         tbody{
-            tr:nth-child(even){
-                background-color: var(--color-grey-10);
+            tr{
+                &:nth-child(even){
+                    background-color: var(--color-grey-10);
+                } 
+                @media screen and (max-width: 580px) {
+                    margin-bottom: 0.625em;
+                    display: block;
+                    border: 1px solid var( --color-grey-10);
+                    border-radius: 5px;
+                    overflow: hidden;
+                }
             }
             td{
                 text-align: center;
-                padding: 8px 1em;
+                padding: 10px 1em;
+                @media screen and (max-width: 580px) {
+                    display: block;
+                    text-align: right;
+                    border-bottom: 1px solid #ddd;
+                    &:first-child{
+                        background-color:var(--btn-blue);
+                        color: #fff;
+                    }
+                    &::before{
+                        content: attr(data-label);
+                        float: left;
+                        text-transform: uppercase;
+                        font-weight: 700;            
+                    }
+                }
+                
             }
         }
     }

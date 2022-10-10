@@ -12,7 +12,7 @@ header{
             width: 300px;
         }
     }
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 580px) {
         .container{
             width: 90%;
         }
@@ -26,6 +26,14 @@ header{
                 }
         }
         
+        
+    }
+    @media screen and (max-width: 425px) {
+        .menu-nav{
+            .btn-border{
+                min-width: 120px  !important;
+            }
+        }
     }
 }
 

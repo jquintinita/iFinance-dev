@@ -56,6 +56,13 @@ body{
 section{
     overflow: hidden;
 }
+.text-center{
+    text-align: center;
+}
+.text-block{
+    display: block;
+    margin-bottom: 30px;
+}
 .flex-container{
     display: flex;
     flex-wrap: wrap;
@@ -86,7 +93,7 @@ section{
     }
     &.flex-3col{
         > div{
-            flex: 30.33%;
+            flex: 30.33% !important;
         }
     }
     @media screen and (max-width: 980px) {
@@ -114,6 +121,11 @@ section{
             }
             > div:last-child{
                 flex: 1 auto;
+            }
+        }
+        &.flex-3col{
+            > div{
+                flex: 30.33%;
             }
         }
     }
