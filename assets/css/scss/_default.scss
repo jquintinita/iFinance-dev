@@ -109,6 +109,11 @@ section{
                 flex: 1 auto;
             }
         }
+        &.flex-3col{
+            > div{
+                flex: 30.33% !important;
+            }
+        }
     }
     @media screen and (max-width: 580px) {
         &.flex-2col > div{

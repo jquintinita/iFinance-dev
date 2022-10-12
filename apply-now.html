@@ -12,7 +12,7 @@
         <div class="container">
             <div class="row">
                 <nav>
-                    <a href="" class="logo-box"><img src="./assets/img/ifinance-logo.png" width="365"/></a>
+                    <a href="/" class="logo-box"><img src="./assets/img/ifinance-logo.png" width="365"/></a>
                     <div class="menu-nav">
                         <button class="menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
                             <svg width="50" height="50" viewBox="0 0 100 100">
@@ -79,11 +79,19 @@
                             <div class="form-group">
                                 <input type="text" placeholder="Complete Address"/>
                             </div>
-                            <div class="form-group">
-                                <input type="text" placeholder="Upload Id Picture"/>
+                            <div class="form-group fileupload">
+                                <input type="file" id="uploadID" placeholder="Upload Id Picture"/>
+                                <label for="uploadID">
+                                    <span>Upload Id Picture</span>
+                                    <span class="button">Choose File</span>
+                                </label>
                             </div>
-                            <div class="form-group">
-                                <input type="text" placeholder="Upload Store Picture"/>
+                            <div class="form-group fileupload">
+                                <input type="file" id="uploadStore" placeholder="Upload Store Picture"/>
+                                <label for="uploadStore">
+                                    <span>Upload Store Picture</span>
+                                    <span class="button">Choose File</span>
+                                </label>
                             </div>
                         </div>
                     </div>

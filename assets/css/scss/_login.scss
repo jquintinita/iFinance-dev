@@ -87,7 +87,7 @@
     list-style: none;
     width: 20px;
     height: 20px;
-    background: rgba(255, 255, 255, 0.2);
+    background: #c9e0b846;
     animation: animate 25s linear infinite;
     bottom: -150px;
     
@@ -99,7 +99,7 @@
     height: 80px;
     animation-delay: 0s;
     background: rgba(255, 255, 255, 0);
-    border: 2px solid rgba(255,255,255,0.2);
+    border: 2px solid rgba(255,255,255,0.4);
 }
 
 
@@ -123,7 +123,7 @@
     width: 60px;
     height: 60px;
     background: rgba(255, 255, 255, 0);
-    border: 2px solid rgba(255,255,255,0.2);
+    border: 2px solid rgba(255,255,255,0.4);
     animation-delay: 0s;
     animation-duration: 18s;
 }

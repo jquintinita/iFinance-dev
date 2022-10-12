@@ -116,6 +116,9 @@ section {
   .flex-container.flex-1col-3col > div:last-child {
     flex: 1 auto;
   }
+  .flex-container.flex-3col > div {
+    flex: 30.33% !important;
+  }
 }
 @media screen and (max-width: 580px) {
   .flex-container.flex-2col > div {
@@ -291,6 +294,10 @@ footer .flex-container {
 
 .icon-next:before {
   content: "\e904";
+}
+
+.icon-upload:before {
+  content: "\e905";
 }
 
 .btn-login {
@@ -474,6 +481,63 @@ footer .flex-container {
   border: 1px solid #666;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
+  outline-color: #239ED6 !important;
+}
+.form-group input[type=text]:focus-visible, .form-group input[type=phone]:focus-visible, .form-group textarea:focus-visible {
+  outline-color: #239ED6 !important;
+}
+.form-group.fileupload input[type=file] {
+  display: none;
+}
+.form-group.fileupload label {
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+  box-sizing: initial;
+}
+.form-group.fileupload label span {
+  border-radius: 5px 0px 0px 5px;
+  border: 1px solid #666;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  padding: 8px 1em;
+  text-align: left;
+  position: relative;
+  flex: 1 auto;
+  outline-color: #239ED6 !important;
+}
+.form-group.fileupload label span.button {
+  display: block;
+  flex: 0 160px;
+  text-align: center;
+  padding: 8px 1em;
+  border-radius: 0 5px 5px 0px;
+  border: 1px solid var(--color-grey-70);
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  background-color: var(--color-grey-70);
+  color: var(--light-text);
+}
+.form-group.fileupload label span.button:hover {
+  background-color: var(--color-grey-80);
+  color: var(--light-text);
+  cursor: pointer;
+  outline-color: #239ED6 !important;
+}
+@media screen and (max-width: 580px) {
+  .form-group.fileupload label span.button {
+    font-size: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 80px;
+  }
+  .form-group.fileupload label span.button:before {
+    content: "\e905";
+    font-family: "icomoon" !important;
+    font-size: 22px;
+    line-height: 0;
+  }
 }
 
 .form-group input {
@@ -519,6 +583,11 @@ footer .flex-container {
   border: 1px solid #666;
   font-family: "Montserrat", sans-serif;
   height: 70;
+  font-size: 16px;
+  outline-color: #239ED6 !important;
+}
+.contact-us-form .form-group input[type=text]:focus-visible, .contact-us-form .form-group input[type=phone]:focus-visible, .contact-us-form .form-group textarea:focus-visible {
+  outline-color: #239ED6 !important;
 }
 .contact-us-form .btn-apply {
   display: block;
@@ -611,6 +680,9 @@ footer .flex-container {
   background: var(--color-fire);
   box-shadow: var(--shadow-fire);
   transition: opacity 0.15s ease;
+}
+.segmentedControl .segmentedControl--group input + label:hover {
+  cursor: pointer;
 }
 .segmentedControl .segmentedControl--group input + label:hover::before {
   opacity: 1;
@@ -840,7 +912,7 @@ header nav .menu-nav ul li a:hover {
 }
 
 .banner-sec {
-  background-color: #F4F4F4;
+  background-color: #f3f3f3;
   padding: 30px 0;
   position: relative;
   height: auto;
@@ -857,6 +929,108 @@ header nav .menu-nav ul li a:hover {
   z-index: 1;
   width: 100%;
   height: 600px;
+}
+.banner-sec .banner-backgrounds .circles {
+  z-index: 2;
+}
+.banner-sec .banner-backgrounds .circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(201, 224, 184, 0.2745098039);
+  -webkit-animation: animate 25s linear infinite;
+          animation: animate 25s linear infinite;
+  bottom: -150px;
+}
+.banner-sec .banner-backgrounds .circles li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  background: rgba(255, 255, 255, 0);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+}
+.banner-sec .banner-backgrounds .circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-duration: 12s;
+          animation-duration: 12s;
+}
+.banner-sec .banner-backgrounds .circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+.banner-sec .banner-backgrounds .circles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-duration: 18s;
+          animation-duration: 18s;
+}
+.banner-sec .banner-backgrounds .circles li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.banner-sec .banner-backgrounds .circles li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  background: rgba(255, 255, 255, 0);
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+.banner-sec .banner-backgrounds .circles li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  -webkit-animation-delay: 7s;
+          animation-delay: 7s;
+}
+.banner-sec .banner-backgrounds .circles li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  background: rgba(255, 255, 255, 0);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  -webkit-animation-delay: 15s;
+          animation-delay: 15s;
+  -webkit-animation-duration: 45s;
+          animation-duration: 45s;
+}
+.banner-sec .banner-backgrounds .circles li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-duration: 35s;
+          animation-duration: 35s;
+}
+.banner-sec .banner-backgrounds .circles li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-duration: 11s;
+          animation-duration: 11s;
 }
 @media screen and (max-width: 1024px) {
   .banner-sec {
@@ -1386,14 +1560,14 @@ header nav .menu-nav ul li a:hover {
   .steps-sec .row div {
     flex: 0 30.33% !important;
   }
-  .steps-sec .row div:first-child {
+  .steps-sec .row div:not(.steps) {
     flex: 0 100% !important;
     padding-bottom: 40px;
   }
-  .steps-sec .row div:first-child h3 {
+  .steps-sec .row div:not(.steps) h3 {
     text-align: center;
   }
-  .steps-sec .row div:first-child a {
+  .steps-sec .row div:not(.steps) a {
     max-width: -webkit-max-content;
     max-width: -moz-max-content;
     max-width: max-content;
@@ -1813,7 +1987,7 @@ header nav .menu-nav ul li a:hover {
   list-style: none;
   width: 20px;
   height: 20px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(201, 224, 184, 0.2745098039);
   -webkit-animation: animate 25s linear infinite;
           animation: animate 25s linear infinite;
   bottom: -150px;
@@ -1826,7 +2000,7 @@ header nav .menu-nav ul li a:hover {
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
   background: rgba(255, 255, 255, 0);
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.4);
 }
 
 .circles li:nth-child(2) {
@@ -1852,7 +2026,7 @@ header nav .menu-nav ul li a:hover {
   width: 60px;
   height: 60px;
   background: rgba(255, 255, 255, 0);
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.4);
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
   -webkit-animation-duration: 18s;
@@ -2097,4 +2271,7 @@ header nav .menu-nav ul li a:hover {
   align-items: center;
   margin-top: 30px;
   justify-content: center;
+}
+#apply-now-sec .apply-now-box .fileupload label {
+  align-content: center;
 }/*# sourceMappingURL=style.css.map */

@@ -57,6 +57,20 @@ $('.testi-slider').slick({
 });
 
 
+const finputs = Array.from(
+  document.querySelectorAll('.fileupload [type="file"]')
+);
+
+finputs.forEach((input) => {
+  input.addEventListener("change", (e) => {
+      const path = e.target.value;
+      const filenameField = e.target.parentElement.querySelector("span");
+      const filename = path.split(/\/|\\/).pop();
+      if (filename) filenameField.innerText = filename;
+      else filenameField.innerText = "Filename";
+  });
+});
+
 $(function() {
     // This will select everything with the class smoothScroll
     // This should prevent problems with carousel, scrollspy, etc...
